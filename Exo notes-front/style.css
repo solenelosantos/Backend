@@ -1,0 +1,29 @@
+body {
+    font-size: 16px
+}
+
+#notes {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    row-gap: 40px;
+
+    .note {
+        padding: 10px;
+        border-radius: 10px;
+        margin: 20px;
+
+        &:has(>form>input:checked) {
+            border: 3px solid green;
+            background-color: rgb(176, 222, 176);
+            opacity: 40%;
+        }
+
+        &:not(:has(>form>input:checked)) {
+            border: 3px solid rgb(199, 88, 88);
+            background-color: rgb(237, 196, 196);
+        }
+    }
+
+}

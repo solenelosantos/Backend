@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Known users - Version {{version}}</h1>
+        <div id="users">
+            {% for user in users %}
+                <span class="user">
+                    <a class="pill" href="/front/messages/{{user.id}}">{{user.nickname}} ({{user.name}})</a>
+                    <a href="mailto:{{user.email}}">{{user.email}}</a>
+                </span>
+            {% endfor %}
+        </div>
+    </body>
+</html>
